@@ -1,0 +1,31 @@
+<div class="panel panel-default">
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-sm-5">
+        <h1>Carrito de Compras</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-5">
+        <h3>Tu pedido:</h3>
+        <ul class="list-group">
+          <li *ngFor="let item of pedidos" class="list-group-item">
+            <img [src]="'assets/'+item.imagen" alt="" class="img-circle pull-left">
+            <h4 class="list-group-item-heading">{{item.nombre}}</h4>
+            <p class="list-group-item-text"><b>Unidades: </b>{{item.cantidad}}</p>
+            <p class="list-group-item-text"><b>Subtotal: </b>${{item.precio}}</p>
+          </li>
+        </ul>
+        <a name="" id="" class="btn btn-default" [routerLink]="['/inicio']" role="button">Atrás</a>
+      </div>
+      <div class="col-sm-6">
+        <h2>Total pedido: ${{calcularTotal()}}</h2>
+        <div class="btn-group" role="group" aria-label="...">
+          <a [routerLink]="['/inicio']" class="btn btn-default">Cancelar</a>
+          <button type="button" (click)="onPagar()" class="btn btn-default">Pagar</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

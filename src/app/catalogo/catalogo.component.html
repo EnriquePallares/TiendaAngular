@@ -1,0 +1,43 @@
+<div class="panel panel-default">
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-sm-6">
+        <h1>Catálogo de productos</h1>
+      </div>
+      <div class="col-sm-3 col-sm-offset-3">
+
+        <div class="form-group">
+          <label for=""><h4>¿Qué estás buscando?</h4></label>
+          <input [(ngModel)]="buscar" type="text" class="form-control" value="" id="buscador" placeholder="Buscar producto">
+        </div>
+      </div>
+     
+    </div>
+    <hr/>
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="catalogo-container">
+          <ng-container *ngFor='let item of productos'>
+
+          <div *ngIf="buscar == '' || item.nombre.toLowerCase().includes(buscar.toLowerCase())"  class="thumbnail catologo-item">
+            <img [src]="'assets/'+item.imagen" alt="...">
+            <div class="caption">
+              <h3>{{item.nombre}}</h3>
+              <p><b>Precio: </b>${{item.precio}}</p>
+              <p><b>Unidades disponibles: </b>{{resta(item.unidades_disponibles, cantidad.value)}}</p>
+              <div class="botones-cont">
+                <a [routerLink]="['ver-producto', item.nombre]" class="btn btn-primary vermas" role="button">Ver más</a>
+                <div class="anadir-cont">
+                  <a (click)="onAddCarrito(item.nombre, cantidad.value, item.imagen)" class="btn btn-warning" role="button">Añadir</a>
+                  <input #cantidad type="number" class="form-control" value="0" id="" aria-describedby="helpId" placeholder="">
+                </div>
+              </div>
+            </div>
+          </div>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

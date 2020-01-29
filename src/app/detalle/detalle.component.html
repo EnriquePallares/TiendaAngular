@@ -1,0 +1,20 @@
+<div class="panel panel-default">
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-sm-5">
+        <h1>{{productoSeleccionado.nombre}}</h1>
+      </div>     
+    </div>
+    <div class="row">
+      <div class="col-sm-5">
+        <img [src]="'assets/'+productoSeleccionado.imagen" alt="..." class="img-thumbnail">
+        <a name="" id="" class="btn btn-default" [routerLink]="['/inicio']" role="button">Atrás</a>
+      </div>
+      <div class="col-sm-6">
+        <h2>Precio: ${{productoSeleccionado.precio}}</h2>
+        <h3>Unidades disponibles: {{productoSeleccionado.unidades_disponibles}}</h3>
+      </div>
+    </div>
+
+  </div>
+</div>

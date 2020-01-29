@@ -1,0 +1,5 @@
+.main{
+    background-image: url('assets/main-fondo.jpg');
+    background-size: cover;
+    height: 80rem;
+}

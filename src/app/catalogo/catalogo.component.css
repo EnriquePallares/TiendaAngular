@@ -1,0 +1,32 @@
+.catalogo-container{
+    display: flex;
+    flex-flow: row wrap;
+    overflow: auto;
+    height: 55rem;
+}
+.thumbnail.catologo-item{
+    width: 23%;
+    margin-right: 20px;
+}
+.thumbnail > img{
+    height: 163px !important;
+    width: auto;
+}
+.botones-cont{
+    display: flex;
+    justify-content: space-between;
+}
+.anadir-cont{
+    display: flex;
+    width: 55%;
+    justify-content: space-between;
+}
+.anadir-cont a{
+    width: 55%;
+}
+.botones-cont .vermas{
+    widows: 25%;
+}
+.anadir-cont input{
+    width: 40%;
+}

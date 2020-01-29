@@ -1,0 +1,24 @@
+.main{
+    background-image: url('assets/login-fondo.jpg');
+    background-size: cover;
+}
+.container{
+    width: 100%;
+    height: 80rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+}
+.container label{
+    font-weight: 100;
+}
+
+.login-form{
+    width: 30%;
+}
+
+.form-group.primero{
+    margin-top: 20px;
+}

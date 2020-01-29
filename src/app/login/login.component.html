@@ -1,0 +1,21 @@
+<div class="main">
+  <div class="container">
+    <div class="row login-form">
+      <div class="col-sm-12">
+        <h3 class="text-center">Inicia Sesión</h3>
+        <p class="text-danger text-center" *ngIf="!match">El usuario o la contraseña son incorrectos</p>
+      </div>
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div class="primero form-group col-sm-12">
+          <label for="">Correo electrónico</label>
+          <input type="email" class="form-control" formControlName="email" id="email" required>
+        </div>
+        <div class="form-group col-sm-12">
+          <label for="">Contraseña</label>
+          <input type="password" class="form-control" formControlName="password" id="password" required>
+        </div>
+        <button type="submit" class="btn btn-success center-block">Ingresar</button>
+      </form>
+    </div>
+  </div>
+</div>

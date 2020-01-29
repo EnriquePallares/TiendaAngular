@@ -1,0 +1,23 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <a class="navbar-brand" [routerLink]="['/inicio']">La bodega</a>
+    <ul class="nav navbar-nav navbar-right">
+      <li class="nav-item active">
+        <a class="nav-link" [routerLink]="['/inicio']"><span class="glyphicon glyphicon-th" aria-hidden="true"></span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/carrito']">
+          <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+          <span *ngIf="pedidos.length > 0" class="badge">{{pedidos.length}}</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/inicio']"><span class="glyphicon glyphicon-inbox" aria-hidden="true"></span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['']"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span></a>
+      </li>
+
+    </ul>
+  </div>
+</nav>
